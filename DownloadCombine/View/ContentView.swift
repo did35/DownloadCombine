@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach(vm.posts) { post in
-                VStack {
+                VStack(alignment: .leading) {
                     Text(post.title)
                         .font(.headline)
                     Text(post.body)
@@ -24,6 +24,7 @@ struct ContentView: View {
                 }
             }
         }
+        .listStyle(.plain)
     }
 }
 

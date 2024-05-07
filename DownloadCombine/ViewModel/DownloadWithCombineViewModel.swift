@@ -19,10 +19,12 @@ class DownloadWithCombineViewModel: ObservableObject {
     func getPosts() {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         
+        // Combine discussion
+        /*
         // 1. Sign-up for monthly subscription for package to be delivered
         // 2. The company would make the package behind the scene
         // 3. Receive the package at your front door
-        // 4. Make sure the box insn't dammage
+        // 4. Make sure the box insn't damage
         // 5. Open and make sure the item is correct
         // 6. Use the item
         // 7. Cancellable at any time
@@ -34,6 +36,7 @@ class DownloadWithCombineViewModel: ObservableObject {
         // 5. decode (decode data into PostModels)
         // 6. sink (put the item into our app)
         // 7. store (cancel subscription if needed)
+         */
         
         URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .background))
