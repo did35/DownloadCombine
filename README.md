@@ -1,1 +1,14 @@
-[README (2).md](https://github.com/did35/DownloadCombine/files/15233174/README.2.md)
+# Downloading data with the Combine framework in Swift/SwiftUI
+
+An introduction of the Combine framework.
+
+
+## Lessons Learned
+
+Understanding Publisher and Subscriber (basic)
+
+
+## Documentation
+
+[Documentation](https://developer.apple.com/documentation/combine)
+
