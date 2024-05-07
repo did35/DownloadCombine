@@ -44,7 +44,12 @@ class DownloadWithCombineViewModel: ObservableObject {
             .tryMap(handleOutput)
             .decode(type: [PostModel].self, decoder: JSONDecoder())
             .sink { (completion) in
-                print("COMPLETION: \(completion)")
+                switch completion {
+                case .finished:
+                    print("Finished")
+                case .failure(let error):
+                    print("here was an error. \(error)")
+                }
             } receiveValue: { [weak self] (returnedPosts) in
                 self?.posts = returnedPosts
             }
